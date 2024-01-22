@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +14,7 @@
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <header class="header">
@@ -127,67 +129,44 @@
             nesciunt fugiat! Nesciunt quisquam quas illum?
           </p>
           <div class="d-grid gap-2 d-md-block">
-            <button
-              class="btn-warning btn text-light"
+            <button id="btn1" 
+              class="btn btn text-light"
               type="button"
             >
               VOIR NOS OFFRES<br />ET FORMULES
             </button>
-            <button class="btn btn-warning text-light "p-2 bd-highlight" type="button">
+            <button id="btn1" class="btn btn-warning text-light "p-2 bd-highlight" type="button">
               CONTACT<br />ET RESERVATIONS
             </button>
           </div>
         </div>
         <div class="col">
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
+          <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img
-                  src="assets/img/gallery/news-defaut.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                <img src="assets/img/gallery/bg_temoignage.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img
-                  src="assets/img/gallery/news-defaut.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                <img src="assets/img/gallery/news-defaut.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img
-                  src="assets/img/gallery/instagram/photos.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
+                <img src="assets/img/gallery/image_map.jpg" class="d-block w-100" alt="...">
               </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
             </div>
             <button
               class="carousel-control-prev"
@@ -219,3 +198,5 @@
     </div>
   </section>
 </body>
+
+</html>

@@ -19,18 +19,19 @@
   </head>
 
   <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <header>
+      <div class="z-1 position absolute w-100 rounded-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
           <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="assets/img/icons/logo.png" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link" aria-current="page" href="#">L'équipe</a>
+            <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item text-white">
+                  <a class="nav-link active text-white" aria-current="page" href="#">L'équipe</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,15 +81,9 @@
             </div>
           </div>
     
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link" aria-current="page" href="#"
-              >&#128241;0559478418</a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" aria-current="page" href="#"><i class='bx bxl-facebook-square'></i><i class='bx bxl-instagram'></i></a>
-          </li> -->
+          
         </nav>
+      </div>
 
         <div id="carouselExampleCaptions" class="carousel slide cover" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -100,7 +95,7 @@
                 aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div class="carousel-item active rounded-circle w-10 h-10">
                 <img src="assets/img/slider/slide_1.jpg" class="d-block w-100" alt="..." />
                 <div class="carousel-caption">
                   <button class="position">Plus d'info</button>
@@ -109,15 +104,13 @@
               <div class="carousel-item">
                 <img src="assets/img/slider/slide_2.jpg" class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                  
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/img/slider/slide_3.jpg" class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
+                  
                 </div>
               </div>
             </div>
@@ -130,6 +123,8 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          </header>
+      
         
           <section id="introduction" class=" container-fluid px-lg-6 mt-5">
             <div class="text-center" class="test">
