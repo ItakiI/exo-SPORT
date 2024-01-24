@@ -97,7 +97,6 @@ messageInput.addEventListener("input", (e) => {
         : (messageValid = false);
 });
 
-
 // Formulaire "SUBMIT"
 submitInput.addEventListener("submit",function (e){
     e.preventDefault();
