@@ -17,7 +17,7 @@ let messageValid = false;
 
 // Création de const "constante" regex qui imposera des conditions
 // Impose trois caractère à vingt-trois maximum, majuscule et minuscule accepter pour valider le formulaire "NOM" et "PRENOM"
-const userRegex = /^[a-zA-Z-]{3,23}$/;
+const userRegex = /^[a-zA-Z-]{2,23}$/;
 // Les caractère misnuscule et majuscule ainsi que les chiffres et certains caractère "spéciaux" son accepter pour le "MAIL" et impose minimum deux caractère pour le nom de domaine (.com / .fr) et le valider
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 // Ajout de "?" après le "+" pour dire peut être différent et, supprimer "1" par "0" pour accepter le 06 et limite un total de 10 chiffre pour valider le formulaire du téléphone.
