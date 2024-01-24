@@ -50,6 +50,7 @@ nomInput.addEventListener("input", (e) => {
         nomValid = false;
     }
 });
+
 // Formulaire "PRENOM"
 prenomInput.addEventListener("input", () => {
     addClass(prenomInput, prenomInput.value, userRegex);
