@@ -1,4 +1,5 @@
 // Création de constante avec "querySelector" qui selectionne les éléments.
+// Création de constante avec "querySelector" qui selectionne les éléments.
 const nomInput = document.querySelector("#formNom");
 const prenomInput = document.querySelector("#formPrenom");
 const telInput = document.querySelector("#formTelephone");
@@ -7,6 +8,8 @@ const subjectInput = document.querySelector("#formSujet");
 const messageInput = document.querySelector("#formMessage");
 const submitInput = document.querySelector("#formId");
 
+// Création de variable de validation pour garder une trace de la validation, initialement elles sont toutes "false".
+let nomValid = false;
 // Création de variable de validation pour garder une trace de la validation, initialement elles sont toutes "false".
 let nomValid = false;
 let prenomValid = false;
@@ -115,3 +118,30 @@ submitInput.addEventListener("submit",function (e){
         alert("Pas du tout okay!")
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+// Correction 
+
+// monInput.addEventListener("input",function (e){
+    //addClass(nomInput,UserRegex,e.target.value)
+
+    //is-valid
+    //rouge-> invalide = false
+    //vert-> valid = true
+
+    //ternaire
+    //ma condition ? = valeur du si : = valeur du sinon
+    //nomInput.classList.contains("is-valid") ? nomValid = true : nomValid = false;
+    //if(nomInput.classList.contains("is-valid")){
+        //nomValid = true;
+        //}
+//})
