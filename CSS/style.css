@@ -94,10 +94,6 @@ h6 {
 
 /* --- navbar --- */
 
-.text-color {
-   color: #CBAC6B;
-}
-
 .navbar-nav .nav-item:hover {
    background-color: #CBAC6B;
 }
@@ -111,6 +107,9 @@ header nav .dropdown-menu .dropdown-item a:hover {
 
 }
 
+#carouselExampleCaptions {
+   max-height: 100vh;
+}
 .w-xx {
    width: calc(50px + 8vw) !important;
    height: auto;
