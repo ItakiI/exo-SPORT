@@ -95,8 +95,10 @@ h6 {
 
 /* --- navbar --- */
 
+
 .navbar-nav .nav-item:hover {
-   background-color: #CBAC6B;
+   background-color: #CBAC6B ;
+   
 }
 
 header nav .dropdown-menu .dropdown-item a:hover {
@@ -108,9 +110,6 @@ header nav .dropdown-menu .dropdown-item a:hover {
 
 }
 
-#carouselExampleCaptions {
-   max-height: 100vh;
-}
 .w-xx {
    width: calc(50px + 8vw) !important;
    height: auto;
@@ -139,13 +138,15 @@ header nav .dropdown-menu .dropdown-item a:hover {
    background-color: transparent;
 }
 
+nav {
+   position: absolute !important;
+}
+@media (max-width: 992px) {
+   nav {
+      /* position:static !important; */
+      background-color: rgba(0, 0, 0, 0.5)!important;
+   } 
 
-
-
-
-
-.navbar-nav .nav-item {
-   box-sizing: border-box;
 }
 
 /* --- FIN navbar --- */
@@ -161,17 +162,17 @@ header nav .dropdown-menu .dropdown-item a:hover {
    border-radius: 100%;
 }
 
-.hw-info {
-   height: clamp(30px, 45px, 50px) !important;
-   width: clamp(130px, 140px, 150px) !important;
-}
 
 .plus-info {
    border: 3px solid white;
    background: transparent !important;
    color: white;
    text-decoration: none;
-   font-size: calc(4px + 1vw) !important;
+   font-size: calc(2px + 1.2vw) !important;
+}
+
+.fs-10 {
+   font-size: calc(5px + 1.6vw) !important;
 }
 
 .plus-info:hover {
@@ -179,9 +180,7 @@ header nav .dropdown-menu .dropdown-item a:hover {
    border: 3px solid rgb(191, 148, 92);
 }
 
-.fs-10 {
-   font-size: calc(5px + 1.5vw) !important;
-}
+
 
 /* --- FIN Carousel --- */
 
