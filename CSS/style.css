@@ -66,9 +66,18 @@
    font-weight: normal;
    font-style: normal;
 }
-
+@font-face {
+   font-family: 'oswald-bold';
+   /* Choose a name for your font */
+   src: url('../assets/fonts/Oswald-Bold.ttf');
+   font-weight: normal;
+   font-style: normal;
+}
 .oswald {
    font-family: "oswald" !important;
+}
+.oswald-bold {
+   font-family: 'oswald-bold' ;
 }
 
 h1,
@@ -148,12 +157,16 @@ header nav .dropdown-menu .dropdown-item a:hover {
    width: clamp(130px, 140px, 150px) !important;
 }
 
-.button-info {
-
-   border: 2px solid white;
+.plus-info {
+   border: 3px solid white;
    background: transparent !important;
    color: white;
-   font-weight: bold;
+   text-decoration: none;
+   font-size: calc(4px + 1vw) !important;
+}
+.plus-info:hover {
+   color: rgb(191, 148, 92) !important;
+   border: 3px solid rgb(191, 148, 92);
 }
 
 .fs-10 {
@@ -218,11 +231,11 @@ footer a:hover {
    border-bottom: solid;
    width: 8%;
    margin-top: 1%;
-   transition: 0.2s;
+   transition: 0.4s;
 }
 
 .act-hr a:hover::after {
-   transition: 0.2s;
+   transition: 0.4s;
    width: 55%;
 }
 

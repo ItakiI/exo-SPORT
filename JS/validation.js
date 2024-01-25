@@ -10,8 +10,6 @@ const submitInput = document.querySelector("#formId");
 
 // Création de variable de validation pour garder une trace de la validation, initialement elles sont toutes "false".
 let nomValid = false;
-// Création de variable de validation pour garder une trace de la validation, initialement elles sont toutes "false".
-let nomValid = false;
 let prenomValid = false;
 let telValid = false;
 let mailValid = false;
@@ -115,7 +113,7 @@ submitInput.addEventListener("submit",function (e){
           message => alert(message)
         );        
     } else {
-        alert("Pas du tout okay!")
+        alert("Veuillez remplir tous les champs correctement!")
     }
 });
 
