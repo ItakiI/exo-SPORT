@@ -66,6 +66,7 @@
    font-weight: normal;
    font-style: normal;
 }
+
 @font-face {
    font-family: 'oswald-bold';
    /* Choose a name for your font */
@@ -73,11 +74,13 @@
    font-weight: normal;
    font-style: normal;
 }
+
 .oswald {
    font-family: "oswald" !important;
 }
+
 .oswald-bold {
-   font-family: 'oswald-bold' ;
+   font-family: 'oswald-bold';
 }
 
 h1,
@@ -90,6 +93,18 @@ h6 {
 }
 
 /* --- navbar --- */
+
+.text-color {
+   color: #CBAC6B;
+}
+
+.navbar-nav .nav-item:hover {
+   background-color: #CBAC6B;
+}
+
+header nav .dropdown-menu .dropdown-item a:hover {
+   color: #CBAC6B !important;
+}
 
 .fs-xx {
    font-size: calc(6px + 0.8vw) !important;
@@ -126,13 +141,7 @@ h6 {
 
 
 
-.navbar-nav .nav-item:hover {
-   background-color: #CBAC6B;
-}
 
-header nav .dropdown-menu .dropdown-item a:hover {
-   color: #CBAC6B !important;
-}
 
 
 .navbar-nav .nav-item {
@@ -164,6 +173,7 @@ header nav .dropdown-menu .dropdown-item a:hover {
    text-decoration: none;
    font-size: calc(4px + 1vw) !important;
 }
+
 .plus-info:hover {
    color: rgb(191, 148, 92) !important;
    border: 3px solid rgb(191, 148, 92);
@@ -337,6 +347,6 @@ form .btn-form {
 
 /* --- FIN Formulaire de contacte --- */
 
-.btn1{
-   background-color: #CBAC6B !important; 
-  }
+.btn1 {
+   background-color: #CBAC6B !important;
+}
