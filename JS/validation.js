@@ -114,14 +114,17 @@ submitInput.addEventListener("submit", function (e) {
       SecureToken: "de2ae524-5e5e-4fae-9f63-34037862a6de",
       To: "scellier.yoann@gmail.com",
       From: "scellier.yoann@gmail.com",
-      Subject: "This is the subject",
-      Body: "And this is the body",
-    }).then((message) => alert(message));
+      Subject: subjectInput.value,
+      Body: messageInput.value,
+    }).then(
+      // Alors un message de confirmation d'envoi apparaît
+      message => alert(message + 'Votre email a bien été envoyé, merci!')
+    );
+    alert('Message envoyé!')
   } else {
     alert("Veuillez remplir tous les champs correctement!");
   }
 });
-
 // Correction
 
 // monInput.addEventListener("input",function (e){
