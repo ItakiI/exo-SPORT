@@ -30,116 +30,111 @@ const messageRegex = /^[^<>{}$]{24,}$/;
 
 // Création d'une fonction addClass qui prend dans les paramètres "input" & "regex"
 function addClass(input, inputValue, regex) {
-    // Création d'une condition qui va vérifié si c'est "true" ou "false"
-    // Si c'est "true" (vrai) elle passe dans la condition "if"
-    if (regex.test(inputValue)) {
-        input.classList.remove("is-invalid"); // remove pour ajouter rouge
-        input.classList.add("is-valid"); // add pour ajouter vert
-    } else {
-        input.classList.remove("is-valid"); // remove pour ajouter vert
-        input.classList.add("is-invalid"); // add pour rajouter le rouge
-    }
+  // Création d'une condition qui va vérifié si c'est "true" ou "false"
+  // Si c'est "true" (vrai) elle passe dans la condition "if"
+  if (regex.test(inputValue)) {
+    input.classList.remove("is-invalid"); // remove pour ajouter rouge
+    input.classList.add("is-valid"); // add pour ajouter vert
+  } else {
+    input.classList.remove("is-valid"); // remove pour ajouter vert
+    input.classList.add("is-invalid"); // add pour rajouter le rouge
+  }
 }
 
 // Création d'écoute d'évenement pour vérifier si le formulaire est "false" ou "true".
 // Formulaire "NOM"
 nomInput.addEventListener("input", (e) => {
-    addClass(nomInput, e.target.value, userRegex);
-    if (nomInput.classList.contains("is-valid")) {
-        nomValid = true;
-    } else {
-        nomValid = false;
-    }
+  addClass(nomInput, e.target.value, userRegex);
+  if (nomInput.classList.contains("is-valid")) {
+    nomValid = true;
+  } else {
+    nomValid = false;
+  }
 });
 
 // Formulaire "PRENOM"
 prenomInput.addEventListener("input", () => {
-    addClass(prenomInput, prenomInput.value, userRegex);
-    if (prenomInput.classList.contains("is-valid")) {
-        prenomValid = true;
-    } else {
-        prenomValid = false;
-    }
+  addClass(prenomInput, prenomInput.value, userRegex);
+  if (prenomInput.classList.contains("is-valid")) {
+    prenomValid = true;
+  } else {
+    prenomValid = false;
+  }
 });
 // Formulaire "TELEPHONE"
 telInput.addEventListener("input", () => {
-    //remplace le 0 de début par +33, et supprime les éspace et stocker la nouvelle valeur dans une variable.
-    let telValue = telInput.value.replace(/^0+/, "+33").replace(/\s/g, "");
-    // assigne la nouvelle valeur stoquée dans la variable à notre valeur de l'input.
-    telInput.value = telValue;
-    //appele la addClass en utilisant nouvelle valeur.
-    addClass(telInput, telValue, phoneNumberRegex);
-    telInput.classList.contains("is-valid")
-        ? (telValid = true)
-        : (telValid = false);
+  //remplace le 0 de début par +33, et supprime les éspace et stocker la nouvelle valeur dans une variable.
+  let telValue = telInput.value.replace(/^0+/, "+33").replace(/\s/g, "");
+  // assigne la nouvelle valeur stoquée dans la variable à notre valeur de l'input.
+  telInput.value = telValue;
+  //appele la addClass en utilisant nouvelle valeur.
+  addClass(telInput, telValue, phoneNumberRegex);
+  telInput.classList.contains("is-valid")
+    ? (telValid = true)
+    : (telValid = false);
 });
 
 // Formulaire "MAIL"
 mailInput.addEventListener("input", (e) => {
-    addClass(mailInput, e.target.value, emailRegex);
-    mailInput.classList.contains("is-valid")
-        ? (mailValid = true)
-        : (mailValid = false);
+  addClass(mailInput, e.target.value, emailRegex);
+  mailInput.classList.contains("is-valid")
+    ? (mailValid = true)
+    : (mailValid = false);
 });
 
 // Formulaire "SUJET"
 subjectInput.addEventListener("input", (e) => {
-    addClass(subjectInput, e.target.value, subjectRegex);
-    subjectInput.classList.contains("is-valid")
-        ? (subjectValid = true)
-        : (subjectValid = false);
+  addClass(subjectInput, e.target.value, subjectRegex);
+  subjectInput.classList.contains("is-valid")
+    ? (subjectValid = true)
+    : (subjectValid = false);
 });
 
 // Formulaire "MESSAGE"
 messageInput.addEventListener("input", (e) => {
-    addClass(mailInput, e.target.value, messageRegex);
-    mailInput.classList.contains("is-valid")
-        ? (messageValid = true)
-        : (messageValid = false);
+  addClass(messageInput, e.target.value, messageRegex);
+  mailInput.classList.contains("is-valid")
+    ? (messageValid = true)
+    : (messageValid = false);
 });
 
 // Formulaire "SUBMIT"
-submitInput.addEventListener("submit",function (e){
-    e.preventDefault();
-    if (nomValid && prenomValid && telValid && mailValid && subjectValid && messageValid) {
-// API mail
-        Email.send({
-            SecureToken : "de2ae524-5e5e-4fae-9f63-34037862a6de",
-            To : 'scellier.yoann@gmail.com',
-            From : "scellier.yoann@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );        
-    } else {
-        alert("Veuillez remplir tous les champs correctement!")
-    }
+submitInput.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (
+    nomValid &&
+    prenomValid &&
+    telValid &&
+    mailValid &&
+    subjectValid &&
+    messageValid
+  ) {
+    // API mail
+    Email.send({
+      SecureToken: "de2ae524-5e5e-4fae-9f63-34037862a6de",
+      To: "scellier.yoann@gmail.com",
+      From: "scellier.yoann@gmail.com",
+      Subject: "This is the subject",
+      Body: "And this is the body",
+    }).then((message) => alert(message));
+  } else {
+    alert("Veuillez remplir tous les champs correctement!");
+  }
 });
 
-
-
-
-
-
-
-
-
-
-
-// Correction 
+// Correction
 
 // monInput.addEventListener("input",function (e){
-    //addClass(nomInput,UserRegex,e.target.value)
+//addClass(nomInput,UserRegex,e.target.value)
 
-    //is-valid
-    //rouge-> invalide = false
-    //vert-> valid = true
+//is-valid
+//rouge-> invalide = false
+//vert-> valid = true
 
-    //ternaire
-    //ma condition ? = valeur du si : = valeur du sinon
-    //nomInput.classList.contains("is-valid") ? nomValid = true : nomValid = false;
-    //if(nomInput.classList.contains("is-valid")){
-        //nomValid = true;
-        //}
+//ternaire
+//ma condition ? = valeur du si : = valeur du sinon
+//nomInput.classList.contains("is-valid") ? nomValid = true : nomValid = false;
+//if(nomInput.classList.contains("is-valid")){
+//nomValid = true;
+//}
 //})
