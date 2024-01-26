@@ -238,14 +238,14 @@ footer a:hover {
 .act-hr a::after {
    content: '';
    border-bottom: solid;
-   width: 8%;
+   width: 30px;
    margin-top: 1%;
    transition: 0.4s;
 }
 
 .act-hr a:hover::after {
    transition: 0.4s;
-   width: 55%;
+   width: 200px;
 }
 
 .footer-hr::before {
@@ -264,14 +264,14 @@ footer a:hover {
 .plus-hr a::after {
    content: '';
    border-bottom: solid;
-   width: 25%;
+   width: 50px;
    margin-top: 1%;
    transition: 0.3s;
 }
 
 .plus-hr a:hover::after {
    transition: 0.2s;
-   width: 100%;
+   width: 105px;
 }
 
 /* ---------- FIN Section Actualités ----------  */
